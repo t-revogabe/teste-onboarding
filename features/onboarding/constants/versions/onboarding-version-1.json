@@ -18,9 +18,21 @@
         "question": {
           "type": "single-select",
           "options": [
-            { "id": "learn", "label": "Learn something new", "emoji": "📚" },
-            { "id": "improve", "label": "Improve my skills", "emoji": "🚀" },
-            { "id": "explore", "label": "Just exploring", "emoji": "🔍" }
+            {
+              "id": "learn",
+              "label": "Leainginsadsd",
+              "emoji": "📚"
+            },
+            {
+              "id": "improve",
+              "label": "Improve my skills",
+              "emoji": "🚀"
+            },
+            {
+              "id": "explore",
+              "label": "Just exploring",
+              "emoji": "🔍"
+            }
           ]
         },
         "next": "experience"
@@ -33,9 +45,21 @@
         "question": {
           "type": "single-select",
           "options": [
-            { "id": "beginner", "label": "Early", "emoji": "🌱" },
-            { "id": "intermediate", "label": "Intermediate", "emoji": "⚡" },
-            { "id": "advanced", "label": "Advanced", "emoji": "🏆" }
+            {
+              "id": "beginner",
+              "label": "Early",
+              "emoji": "🌱"
+            },
+            {
+              "id": "intermediate",
+              "label": "Intermediate",
+              "emoji": "⚡"
+            },
+            {
+              "id": "advanced",
+              "label": "Advanced",
+              "emoji": "🏆"
+            }
           ]
         },
         "next": "age"
@@ -68,10 +92,26 @@
         "question": {
           "type": "multi-select",
           "options": [
-            { "id": "design", "label": "Design", "emoji": "🎨" },
-            { "id": "development", "label": "Development", "emoji": "💻" },
-            { "id": "marketing", "label": "Marketing", "emoji": "📈" },
-            { "id": "business", "label": "Business", "emoji": "💼" }
+            {
+              "id": "design",
+              "label": "Design",
+              "emoji": "🎨"
+            },
+            {
+              "id": "development",
+              "label": "Development",
+              "emoji": "💻"
+            },
+            {
+              "id": "marketing",
+              "label": "Marketing",
+              "emoji": "📈"
+            },
+            {
+              "id": "business",
+              "label": "Business",
+              "emoji": "💼"
+            }
           ]
         },
         "next": "bye"
