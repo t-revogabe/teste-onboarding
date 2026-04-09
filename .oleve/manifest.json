@@ -1,0 +1,175 @@
+{
+  "sdkVersion": "0.2.0",
+  "createdAt": "2026-04-09T19:55:49.997Z",
+  "featureDir": "features/onboarding",
+  "files": [
+    {
+      "source": "templates/features/onboarding/types/onboarding-schema.ts",
+      "target": "features/onboarding/types/onboarding-schema.ts",
+      "registryName": "onboarding-schema-types"
+    },
+    {
+      "source": "templates/features/onboarding/types/onboarding.ts",
+      "target": "features/onboarding/types/onboarding.ts",
+      "registryName": "onboarding-types"
+    },
+    {
+      "source": "templates/features/onboarding/types/onboarding-loading.ts",
+      "target": "features/onboarding/types/onboarding-loading.ts",
+      "registryName": "onboarding-loading-types"
+    },
+    {
+      "source": "templates/features/onboarding/utils/resolve-next.ts",
+      "target": "features/onboarding/utils/resolve-next.ts",
+      "registryName": "resolve-next"
+    },
+    {
+      "source": "templates/features/onboarding/utils/parse-onboarding.ts",
+      "target": "features/onboarding/utils/parse-onboarding.ts",
+      "registryName": "parse-onboarding"
+    },
+    {
+      "source": "templates/features/onboarding/utils/onboarding-flow.ts",
+      "target": "features/onboarding/utils/onboarding-flow.ts",
+      "registryName": "onboarding-flow"
+    },
+    {
+      "source": "templates/features/onboarding/utils/onboarding-animations.ts",
+      "target": "features/onboarding/utils/onboarding-animations.ts",
+      "registryName": "onboarding-animations"
+    },
+    {
+      "source": "templates/features/onboarding/stores/onboarding-store.ts",
+      "target": "features/onboarding/stores/onboarding-store.ts",
+      "registryName": "onboarding-store"
+    },
+    {
+      "source": "templates/features/onboarding/hooks/use-complete-onboarding.ts",
+      "target": "features/onboarding/hooks/use-complete-onboarding.ts",
+      "registryName": "use-complete-onboarding"
+    },
+    {
+      "source": "templates/features/onboarding/hooks/use-onboarding-navigation.ts",
+      "target": "features/onboarding/hooks/use-onboarding-navigation.ts",
+      "registryName": "use-onboarding-navigation"
+    },
+    {
+      "source": "templates/features/onboarding/hooks/use-update-onboarding.ts",
+      "target": "features/onboarding/hooks/use-update-onboarding.ts",
+      "registryName": "use-update-onboarding"
+    },
+    {
+      "source": "templates/features/onboarding/constants/onboarding-steps.ts",
+      "target": "features/onboarding/constants/onboarding-steps.ts",
+      "registryName": "onboarding-steps"
+    },
+    {
+      "source": "templates/features/onboarding/constants/onboarding-routes.ts",
+      "target": "features/onboarding/constants/onboarding-routes.ts",
+      "registryName": "onboarding-routes"
+    },
+    {
+      "source": "templates/features/onboarding/constants/onboarding-icon-registry.ts",
+      "target": "features/onboarding/constants/onboarding-icon-registry.ts",
+      "registryName": "onboarding-icon-registry"
+    },
+    {
+      "source": "templates/features/onboarding/constants/onboarding-image-registry.ts",
+      "target": "features/onboarding/constants/onboarding-image-registry.ts",
+      "registryName": "onboarding-image-registry"
+    },
+    {
+      "source": "templates/features/onboarding/constants/onboarding-showcase-registry.ts",
+      "target": "features/onboarding/constants/onboarding-showcase-registry.ts",
+      "registryName": "onboarding-showcase-registry"
+    },
+    {
+      "source": "templates/features/onboarding/constants/slider.ts",
+      "target": "features/onboarding/constants/slider.ts",
+      "registryName": "slider-constants"
+    },
+    {
+      "source": "templates/features/onboarding/contexts/onboarding-layout-context.tsx",
+      "target": "features/onboarding/contexts/onboarding-layout-context.tsx",
+      "registryName": "onboarding-layout-context"
+    },
+    {
+      "source": "templates/features/onboarding/components/ui/select-option.tsx",
+      "target": "features/onboarding/components/ui/select-option.tsx",
+      "registryName": "select-option"
+    },
+    {
+      "source": "templates/features/onboarding/components/ui/range-slider.tsx",
+      "target": "features/onboarding/components/ui/range-slider.tsx",
+      "registryName": "range-slider"
+    },
+    {
+      "source": "templates/features/onboarding/components/ui/info-banner.tsx",
+      "target": "features/onboarding/components/ui/info-banner.tsx",
+      "registryName": "info-banner"
+    },
+    {
+      "source": "templates/features/onboarding/components/ui/content-card.tsx",
+      "target": "features/onboarding/components/ui/content-card.tsx",
+      "registryName": "content-card"
+    },
+    {
+      "source": "templates/features/onboarding/components/showcase/welcome.tsx",
+      "target": "features/onboarding/components/showcase/welcome.tsx",
+      "registryName": "showcase-welcome"
+    },
+    {
+      "source": "templates/features/onboarding/components/questions/question-renderer.tsx",
+      "target": "features/onboarding/components/questions/question-renderer.tsx",
+      "registryName": "questions-renderer"
+    },
+    {
+      "source": "templates/features/onboarding/components/questions/single-select-input.tsx",
+      "target": "features/onboarding/components/questions/single-select-input.tsx",
+      "registryName": "single-select-input"
+    },
+    {
+      "source": "templates/features/onboarding/components/questions/multi-select-input.tsx",
+      "target": "features/onboarding/components/questions/multi-select-input.tsx",
+      "registryName": "multi-select-input"
+    },
+    {
+      "source": "templates/features/onboarding/components/questions/slider-input.tsx",
+      "target": "features/onboarding/components/questions/slider-input.tsx",
+      "registryName": "slider-input"
+    },
+    {
+      "source": "templates/features/onboarding/components/shared/onboarding-header.tsx",
+      "target": "features/onboarding/components/shared/onboarding-header.tsx",
+      "registryName": "onboarding-header"
+    },
+    {
+      "source": "templates/features/onboarding/components/shared/onboarding-footer.tsx",
+      "target": "features/onboarding/components/shared/onboarding-footer.tsx",
+      "registryName": "onboarding-footer"
+    },
+    {
+      "source": "templates/features/onboarding/components/shared/onboarding-progress.tsx",
+      "target": "features/onboarding/components/shared/onboarding-progress.tsx",
+      "registryName": "onboarding-progress"
+    },
+    {
+      "source": "templates/features/onboarding/components/shared/onboarding-layout.tsx",
+      "target": "features/onboarding/components/shared/onboarding-layout.tsx",
+      "registryName": "onboarding-layout"
+    },
+    {
+      "source": "templates/features/onboarding/constants/versions/onboarding-version-1.json",
+      "target": "features/onboarding/constants/versions/onboarding-version-1.json",
+      "registryName": "schema-onboarding-version-1"
+    }
+  ],
+  "dependencies": [
+    "react-native-reanimated",
+    "zustand",
+    "expo-router",
+    "expo-haptics",
+    "react-native-gesture-handler",
+    "lucide-react-native"
+  ]
+}

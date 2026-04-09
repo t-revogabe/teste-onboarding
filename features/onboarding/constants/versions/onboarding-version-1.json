@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "onboarding": {
+    "id": "app-onboarding",
+    "firstStep": "welcome",
+    "steps": [
+      {
+        "id": "welcome",
+        "type": "showcase",
+        "component": "Welcome",
+        "next": "goal"
+      },
+      {
+        "id": "goal",
+        "type": "question",
+        "title": "What's your goal?",
+        "subtitle": "We'll tailor your experience.",
+        "question": {
+          "type": "single-select",
+          "options": [
+            { "id": "learn", "label": "Learn something new", "emoji": "📚" },
+            { "id": "improve", "label": "Improve my skills", "emoji": "🚀" },
+            { "id": "explore", "label": "Just exploring", "emoji": "🔍" }
+          ]
+        },
+        "next": "experience"
+      },
+      {
+        "id": "experience",
+        "type": "question",
+        "title": "How experienced are you?",
+        "subtitle": "No wrong answers here.",
+        "question": {
+          "type": "single-select",
+          "options": [
+            { "id": "beginner", "label": "Early", "emoji": "🌱" },
+            { "id": "intermediate", "label": "Intermediate", "emoji": "⚡" },
+            { "id": "advanced", "label": "Advanced", "emoji": "🏆" }
+          ]
+        },
+        "next": "age"
+      },
+      {
+        "id": "age",
+        "type": "question",
+        "title": "How old are you?",
+        "subtitle": "This helps us personalize your experience.",
+        "question": {
+          "type": "slider",
+          "min": 8,
+          "max": 99,
+          "default": 25,
+          "step": 1
+        },
+        "hint": {
+          "icon": "lock",
+          "label": "Private",
+          "text": "Your age is never shared publicly."
+        },
+        "next": "interests"
+      },
+      {
+        "id": "interests",
+        "type": "question",
+        "title": "What interests you?",
+        "subtitle": "Select all that apply.",
+        "skippable": true,
+        "question": {
+          "type": "multi-select",
+          "options": [
+            { "id": "design", "label": "Design", "emoji": "🎨" },
+            { "id": "development", "label": "Development", "emoji": "💻" },
+            { "id": "marketing", "label": "Marketing", "emoji": "📈" },
+            { "id": "business", "label": "Business", "emoji": "💼" }
+          ]
+        },
+        "next": "bye"
+      },
+      {
+        "id": "bye",
+        "type": "showcase",
+        "component": "Bye",
+        "next": null
+      }
+    ]
+  }
+}
