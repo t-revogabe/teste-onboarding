@@ -15,9 +15,7 @@ import { useResponsive } from "@/hooks/use-responsive";
 
 const SCALE_DOWN = { duration: 80, easing: Easing.inOut(Easing.ease) };
 const SCALE_UP = { duration: 200, easing: Easing.out(Easing.ease) };
-const FOOTER_ENTERING = FadeInUp.duration(350)
-  .delay(200)
-  .easing(Easing.out(Easing.ease));
+const FOOTER_ENTERING = FadeInUp.duration(350).delay(200).easing(Easing.out(Easing.ease));
 
 function OnboardingFooter() {
   const { footerConfig, continueRef } = useOnboardingLayout();
@@ -43,13 +41,10 @@ function OnboardingFooter() {
   const handleContinue = useCallback(
     (skip?: boolean) => {
       const targetScale = skip ? skipScale : continueScale;
-      targetScale.value = withSequence(
-        withTiming(0.96, SCALE_DOWN),
-        withTiming(1, SCALE_UP),
-      );
+      targetScale.value = withSequence(withTiming(0.96, SCALE_DOWN), withTiming(1, SCALE_UP));
       continueRef.current?.(skip);
     },
-    [continueRef, continueScale, skipScale],
+    [continueRef, continueScale, skipScale]
   );
 
   const {
@@ -103,7 +98,7 @@ const styles = StyleSheet.create({
     gap: 10,
   },
   continueButton: {
-    borderRadius: 0,
+    borderRadius: 100,
     height: 48,
   },
   skipButton: {

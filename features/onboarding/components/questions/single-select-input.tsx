@@ -26,7 +26,11 @@ function SingleSelectInput({
     <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.scrollContent}>
       <Animated.View entering={staggeredFadeInDown(0)} style={styles.optionsContainer}>
         {options.map((option) => {
-          const image = option.image ? imageRegistry[option.image] : undefined;
+          const image = option.image
+            ? /^https?:\/\//.test(option.image)
+              ? { uri: option.image }
+              : imageRegistry[option.image]
+            : undefined;
           const IconComponent = option.icon ? iconRegistry[option.icon] : undefined;
           const icon = IconComponent ? <IconComponent width={24} height={24} /> : undefined;
 

@@ -38,7 +38,7 @@ function Welcome() {
         <Text style={[styles.emoji, tablet.emoji]}>👋</Text>
 
         <Text variant="bold" style={[styles.title, tablet.title]}>
-          Learn More
+          Welcome!
         </Text>
 
         <Text variant="regular" style={[styles.subtitle, tablet.subtitle]}>

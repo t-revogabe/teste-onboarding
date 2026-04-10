@@ -1,18 +1,6 @@
-import {
-  Image,
-  ImageSourcePropType,
-  Pressable,
-  StyleSheet,
-  View,
-} from "react-native";
+import { Image, ImageSourcePropType, Pressable, StyleSheet, View } from "react-native";
 import * as Haptics from "expo-haptics";
-import Animated, {
-  Easing,
-  useAnimatedStyle,
-  useSharedValue,
-  withSequence,
-  withTiming,
-} from "react-native-reanimated";
+import Animated, { Easing, useAnimatedStyle, useSharedValue, withSequence, withTiming } from "react-native-reanimated";
 
 import Text from "@/components/text";
 import theme from "@/constants/onboarding-theme";
@@ -59,10 +47,7 @@ function SelectOption({
 
   function handlePress() {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-    scale.value = withSequence(
-      withTiming(0.97, SCALE_DOWN),
-      withTiming(1, SCALE_UP),
-    );
+    scale.value = withSequence(withTiming(0.97, SCALE_DOWN), withTiming(1, SCALE_UP));
     onPress();
   }
 
@@ -85,45 +70,23 @@ function SelectOption({
         )}
 
         {!image && emoji && (
-          <View
-            style={[
-              styles.emojiContainer,
-              tablet.emojiContainer,
-              isSelected && styles.emojiContainerSelected,
-            ]}
-          >
+          <View style={[styles.emojiContainer, tablet.emojiContainer, isSelected && styles.emojiContainerSelected]}>
             <Text style={[styles.emoji, tablet.emoji]}>{emoji}</Text>
           </View>
         )}
 
-        {icon && (
-          <View style={[styles.emojiContainer, tablet.emojiContainer]}>
-            {icon}
-          </View>
-        )}
+        {icon && <View style={[styles.emojiContainer, tablet.emojiContainer]}>{icon}</View>}
 
         <View style={styles.textContainer}>
           <Text
             variant="medium"
-            style={[
-              styles.label,
-              tablet.label,
-              !!image && tablet.labelWithImage,
-              isSelected && styles.labelSelected,
-            ]}
+            style={[styles.label, tablet.label, !!image && tablet.labelWithImage, isSelected && styles.labelSelected]}
           >
             {label}
           </Text>
 
           {subtitle && (
-            <Text
-              variant="regular"
-              style={[
-                styles.subtitle,
-                tablet.subtitle,
-                isSelected && styles.subtitleSelected,
-              ]}
-            >
+            <Text variant="regular" style={[styles.subtitle, tablet.subtitle, isSelected && styles.subtitleSelected]}>
               {subtitle}
             </Text>
           )}
@@ -142,12 +105,12 @@ const styles = StyleSheet.create({
   containerWithImage: {
     paddingHorizontal: 12,
     paddingVertical: 12,
-    borderRadius: 0,
+    borderRadius: 24,
   },
   containerWithEmoji: {
     paddingVertical: 12,
     paddingHorizontal: 12,
-    borderRadius: 0,
+    borderRadius: 22,
   },
   containerDefault: {
     backgroundColor: theme.colors.gray[200],
@@ -161,7 +124,7 @@ const styles = StyleSheet.create({
   imageContainer: {
     width: 52,
     height: 52,
-    borderRadius: 0,
+    borderRadius: 16,
     backgroundColor: theme.colors.white[0],
     overflow: "hidden",
   },
@@ -174,7 +137,7 @@ const styles = StyleSheet.create({
     height: 44,
     alignItems: "center",
     justifyContent: "center",
-    borderRadius: 0,
+    borderRadius: 14,
     backgroundColor: theme.colors.white[0],
   },
   emojiContainerSelected: {
