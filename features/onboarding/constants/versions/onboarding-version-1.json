@@ -49,12 +49,14 @@
             {
               "id": "beginner",
               "label": "Early",
-              "emoji": "🌱"
+              "emoji": "🌱",
+              "image": "https://oleve-onboarding-assets.s3.us-east-1.amazonaws.com/teste-onboarding/features/onboarding/constants/versions/onboarding-version-1/experience__beginner/preview.png"
             },
             {
               "id": "intermediate",
               "label": "Intermediate",
-              "emoji": "⚡"
+              "emoji": "⚡",
+              "image": "https://oleve-onboarding-assets.s3.us-east-1.amazonaws.com/teste-onboarding/features/onboarding/constants/versions/onboarding-version-1/experience__intermediate/preview.png"
             },
             {
               "id": "advanced",
