@@ -1,3 +1,5 @@
+import { Image } from "react-native";
+
 import type {
   OnboardingSchema,
   OnboardingStepDefinition,
@@ -57,6 +59,25 @@ function validateSchema(data: unknown): OnboardingSchema {
 
 const schema = validateSchema(onboardingData);
 const stepMap = new Map<string, OnboardingStepDefinition>(schema.onboarding.steps.map((step) => [step.id, step]));
+
+function prefetchRemoteOptionImages(): void {
+  const urls = new Set<string>();
+  for (const step of schema.onboarding.steps) {
+    if (step.type !== "question") continue;
+    const q = step.question;
+    if (q.type !== "single-select" && q.type !== "multi-select") continue;
+    for (const opt of q.options) {
+      if (opt.image && /^https?:\/\//.test(opt.image)) {
+        urls.add(opt.image);
+      }
+    }
+  }
+  for (const url of urls) {
+    Image.prefetch(url).catch(() => {});
+  }
+}
+
+prefetchRemoteOptionImages();
 
 // ---------------------------------------------------------------------------
 // Public API

@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Image, ImageSourcePropType, Pressable, StyleSheet, View } from "react-native";
 import * as Haptics from "expo-haptics";
 import Animated, { Easing, useAnimatedStyle, useSharedValue, withSequence, withTiming } from "react-native-reanimated";
@@ -30,6 +31,12 @@ function SelectOption({
 }: SelectOptionProps) {
   const { responsiveFontSize, tabletStyles } = useResponsive();
   const scale = useSharedValue(1);
+  const [imageFailed, setImageFailed] = useState(false);
+  const hasUsableImage = !!image && !imageFailed;
+
+  useEffect(() => {
+    setImageFailed(false);
+  }, [image]);
 
   const tablet = tabletStyles({
     container: { paddingVertical: 16, paddingHorizontal: 16, gap: 18 },
@@ -57,19 +64,24 @@ function SelectOption({
         onPress={handlePress}
         style={({ pressed }) => [
           styles.container,
-          image ? styles.containerWithImage : styles.containerWithEmoji,
+          hasUsableImage ? styles.containerWithImage : styles.containerWithEmoji,
           isSelected ? styles.containerSelected : styles.containerDefault,
           tablet.container,
           pressed && styles.pressed,
         ]}
       >
-        {image && (
+        {hasUsableImage && (
           <View style={[styles.imageContainer, tablet.imageContainer]}>
-            <Image source={image} style={styles.image} resizeMode="cover" />
+            <Image
+              source={image as ImageSourcePropType}
+              style={styles.image}
+              resizeMode="cover"
+              onError={() => setImageFailed(true)}
+            />
           </View>
         )}
 
-        {!image && emoji && (
+        {!hasUsableImage && emoji && (
           <View style={[styles.emojiContainer, tablet.emojiContainer, isSelected && styles.emojiContainerSelected]}>
             <Text style={[styles.emoji, tablet.emoji]}>{emoji}</Text>
           </View>
