@@ -67,7 +67,7 @@ function prefetchRemoteOptionImages(): void {
     const q = step.question;
     if (q.type !== "single-select" && q.type !== "multi-select") continue;
     for (const opt of q.options) {
-      if (opt.image && /^https?:\/\//.test(opt.image)) {
+      if (opt.image && isRemoteUrl(opt.image)) {
         urls.add(opt.image);
       }
     }
@@ -105,4 +105,8 @@ export function isQuestionStep(step: OnboardingStepDefinition): step is Question
 
 export function isShowcaseStep(step: OnboardingStepDefinition): step is ShowcaseStepDefinition {
   return step.type === "showcase";
+}
+
+export function isRemoteUrl(value: string): boolean {
+  return /^https?:\/\//.test(value);
 }

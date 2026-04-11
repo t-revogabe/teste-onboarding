@@ -5,6 +5,7 @@ import { ONBOARDING_ICON_REGISTRY } from "../../constants/onboarding-icon-regist
 import { ONBOARDING_IMAGE_REGISTRY } from "../../constants/onboarding-image-registry";
 import type { SelectOption } from "../../types/onboarding-schema";
 import { staggeredFadeInDown } from "../../utils/onboarding-animations";
+import { isRemoteUrl } from "../../utils/parse-onboarding";
 import SelectOptionComponent from "../ui/select-option";
 
 interface MultiSelectInputProps {
@@ -26,7 +27,7 @@ function MultiSelectInput({
     <Animated.View entering={staggeredFadeInDown(0)} style={styles.optionsContainer}>
       {options.map((option) => {
         const image = option.image
-          ? /^https?:\/\//.test(option.image)
+          ? isRemoteUrl(option.image)
             ? { uri: option.image }
             : imageRegistry[option.image]
           : undefined;
